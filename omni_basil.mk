@@ -15,7 +15,7 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := B2N
+PRODUCT_RELEASE_NAME := basil
 
 $(call inherit-product, build/target/product/embedded.mk)
 
@@ -55,13 +55,13 @@ $(call inherit-product, build/target/product/verity.mk)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.treble.enabled=true
 
-	# Partitions (listed in the file) to be wiped under recovery.
+# Partitions (listed in the file) to be wiped under recovery.
 TARGET_RECOVERY_WIPE := \
-    device/nokia/B2N/recovery/root/etc/recovery.wipe
+    device/nokia/basil/recovery/root/etc/recovery.wipe
 
 # ROM fstab
 PRODUCT_COPY_FILES += \
-  device/nokia/B2N/rootdir/root/fstab.qcom:root/fstab.qcom
+  device/nokia/basil/rootdir/root/fstab.qcom:root/fstab.qcom
 
 # OEM Unlock reporting
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -81,8 +81,8 @@ PRODUCT_COPY_FILES += \
 endif
 	
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := B2N
-PRODUCT_NAME := omni_B2N
+PRODUCT_DEVICE := basil
+PRODUCT_NAME := omni_basil
 PRODUCT_BRAND := Nokia
 PRODUCT_MODEL := 7 Plus
 PRODUCT_MANUFACTURER := Nokia
